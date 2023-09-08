@@ -1,0 +1,29 @@
+<head>
+    <h1>Split the Bill</h1>
+    
+</head>
+
+<body>
+    <div class="formpage-bg"></div>
+    <div class = "form_box" ><form action="{{ url_for('add_people')}}" method="post">
+        <p class="question">Name of the person</p>
+        <p class="name">
+        <input type="text" id="name" name="name">
+        <p class="question">Item Prices(separate prices by commas)</p>
+        <p class="items">
+        <input type="text" id="items" name="items">
+        <div class="centered_button"><input class = "button home" type="submit" value= "Submit Person"></div>
+    <div class="centered_button"><button class="button_done", onclick="document.location='/results'"> Calculate Bill</button></div>
+    <div class="people">
+        <ol>
+            {%for i in range(0, length)%}  
+                <p>{names[i]}, Items: {items[i]}</p>
+            {%endfor%}
+            </ol>
+    </div>
+
+        
+</body>
+    
+
+    
